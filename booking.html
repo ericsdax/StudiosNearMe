@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudiosNearMe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="images/new_audacitytransmediawikimanual.png">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul id="navBarList">
+            <li class="fLeft">
+                <a class="active" href="index.html"><img id="logo" src="images/new_audacitytransmediawikimanual.png"> StudiosNearMe</a>
+            </li>
+            <li class="fLeft">
+                <div id="tfheader">
+                    <form id="tfnewsearch" method="get" action="search.html">
+                        <input type="search" class="tftextinput" name="navSearch" size="50" maxlength="120" autocomplete="on" placeholder="Search by location, studio type, equipment, etc.">
+                        <input type="submit" value="search" class="tfbutton">
+                    </form>
+                    <div class="tfclear"></div>
+                </div>
+            </li>
+            <li class="fLeft"><a id="useLocation" onclick="useLocation()">Use Location</a></li>
+            <li class="fRight"><a href="login.html">Login</a></li>
+            <li class="fRight"><a href="signup.html">Sign Up</a></li>
+            <li class="fRight"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    
+<iframe id="GoogleCalendar" src="https://calendar.google.com/calendar/embed?src=3v26gjftgmfajcho7ptohi1nvg%40group.calendar.google.com&ctz=America/Chicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    
+<form class="bookingForm" method="get" action="artist-request.html">
+       
+<button id="submitRequest" class="tfbutton">SUBMIT REQUEST</button>
+<select class="bookingDropdown" name="hoursReq">
+    <option value="1">1 hour</option>
+    <option value="1">2 hours</option>
+    <option value="1">3 hours</option>
+    <option value="1">4 hours</option>
+    <option value="1">5 hours</option>
+    <option value="1">6 hours</option>
+    <option value="1">7 hours</option>
+    <option value="1">8 hour</option>
+    <option value="1">9 hours</option>
+    <option value="1">10 hours</option>
+    <option value="1">11 hours</option>
+    <option value="1">12 hours</option>
+    <option value="1">13 hours</option>
+    <option value="1">14 hours</option>
+</select>
+    
+<select class="bookingDropdown" name="engineerReq">
+    <option value="1">No engineer ($0/hr)</option>
+    <option value="1">John Doe ($7/hr)</option>
+    <option value="1">Jane Smith ($15/hr)</option>
+</select>
+        
+</form>
+    
+<script>
+function useLocation(){
+        confirm("Allow us to use your current location?");
+    }
+</script>
+    
+</body>
+
+</html>

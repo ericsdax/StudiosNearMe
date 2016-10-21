@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudiosNearMe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="images/new_audacitytransmediawikimanual.png">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul id="navBarList">
+            <li class="fLeft">
+                <a class="active" href="index.html"><img id="logo" src="images/new_audacitytransmediawikimanual.png"> StudiosNearMe</a>
+            </li>
+            <li class="fLeft">
+                <div id="tfheader">
+                    <form id="tfnewsearch" method="get" action="javascript:search()">
+                        <input type="search" class="tftextinput" name="navSearch" size="50" maxlength="120" autocomplete="on" placeholder="Search by location, studio type, equipment, etc.">
+                        <input type="submit" value="search" class="tfbutton">
+                    </form>
+                    <div class="tfclear"></div>
+                </div>
+            </li>
+            <li class="fLeft"><a id="useLocation" onclick="useLocation()">Use Location</a></li>
+            <li class="fRight"><a href="login.html">Login</a></li>
+            <li class="fRight"><a href="signup.html">Sign Up</a></li>
+            <li class="fRight"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <h5 style="margin-left: 15px;">Tags:</h5>
+    <div id="tagBox">
+        <button class="tagBoxTag">#New Orleans</button>
+        <!--<button class="tagBoxTag">#Neumann u87</button>
+        <button class="tagBoxTag">#Yamaha HS5</button>
+        <button class="tagBoxTag">#Audix OM3</button>
+        <button class="tagBoxTag">#DW Collector's Series</button>-->
+    </div>
+    <h2 style="margin-left: 15px;">Studios Available:</h2>
+    <select id="searchFilter" name="searchFilter">
+        <option value="featured">Featured</option>
+        <option value="featured">Nearest to Me</option>
+        <option value="featured">User Rating</option>
+        <option value="featured">Price (Low to High)</option>
+        <option value="featured">Price (High to Low)</option>
+    </select>
+    
+    
+    <div class="responsive">
+        <div class="img" id="StudioA">
+            <a target="_blank" href="studio.html">
+                <img src="images/HomeStudio.jpg" alt="StudioA" width="300" height="200">
+            </a>
+            <div class="desc">New Orleans</div>
+            <div class="price">$20/hr</div>
+        </div>
+    </div>
+
+
+    <div class="responsive">
+        <div class="img" id="StudioB">
+            <a target="_blank" href="studio.html">
+                <img src="images/HomeStudio.jpg" alt="StudioB" width="600" height="400">
+            </a>
+            <div class="desc">Slidell</div>
+            <div class="price">$10/hr</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img" id="StudioC">
+            <a target="_blank" href="studio.html">
+                <img src="images/HomeStudio.jpg" alt="StudioC" width="600" height="400">
+            </a>
+            <div class="desc">Metairie</div>
+            <div class="price">$200/day</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img" id="StudioD">
+            <a target="_blank" href="studio.html">
+                <img src="images/HomeStudio.jpg" alt="StudioD" width="600" height="400">
+            </a>
+            <div class="desc">Gretna</div>
+            <div class="price">$65/hr</div>
+        </div>
+    </div>
+    
+     <div class="responsive">
+        <div class="img" id="StudioA">
+            <a target="_blank" href="studio.html">
+                <img src="images/HomeStudio.jpg" alt="StudioA" width="300" height="200">
+            </a>
+            <div class="desc">New Orleans</div>
+            <div class="price">$20/hr</div>
+        </div>
+    </div>
+
+
+    <div class="responsive">
+        <div class="img" id="StudioB">
+            <a target="_blank" href="studio.html">
+                <img src="images/HomeStudio.jpg" alt="StudioB" width="600" height="400">
+            </a>
+            <div class="desc">Slidell</div>
+            <div class="price">$10/hr</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img" id="StudioC">
+            <a target="_blank" href="studio.html">
+                <img src="images/HomeStudio.jpg" alt="StudioC" width="600" height="400">
+            </a>
+            <div class="desc">Metairie</div>
+            <div class="price">$200/day</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img" id="StudioD">
+            <a target="_blank" href="studio.html">
+                <img src="images/HomeStudio.jpg" alt="StudioD" width="600" height="400">
+            </a>
+            <div class="desc">Gretna</div>
+            <div class="price">$65/hr</div>
+        </div>
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <button class="tfbutton">&lArr;</button>
+    <button style="float:right" class="tfbutton">&rArr;</button>
+
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var studio1 = {
+                lat: 29.9511,
+                lng: -90.0715
+            };
+            var studio2 = {
+                lat: 30.2752,
+                lng: -89.7812
+            };
+            var studio3 = {
+                lat: 29.9841,
+                lng: -90.1529
+            };
+            var studio4 = {
+                lat: 29.9146,
+                lng: -90.0540
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 9,
+                center: studio1,
+            });
+            var marker1 = new google.maps.Marker({
+                position: studio1,
+                map: map
+            });
+            var marker2 = new google.maps.Marker({
+                position: studio2,
+                map: map
+            });
+            var marker3 = new google.maps.Marker({
+                position: studio3,
+                map: map
+            });
+            var marker4 = new google.maps.Marker({
+                position: studio4,
+                map: map
+            });
+        }
+        
+        function useLocation(){
+        confirm("Allow us to use your current location?");
+    }
+        function search(){
+            var searchTag = $("input[name='navSearch']").val();
+            $("button[class='tagBoxTag']").html("#" + searchTag);
+        }
+        
+        
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyDPmlUz0CESyPJVb-n6ZJb9CH6jLxIEFos&callback=initMap">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudiosNearMe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="images/new_audacitytransmediawikimanual.png">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul id="navBarList">
+            <li class="fLeft">
+                <a class="active" href="index.html"><img id="logo" src="images/new_audacitytransmediawikimanual.png"> StudiosNearMe</a>
+            </li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    
+<div id="sheetOuter">
+    <h2>Request Confirmation</h2>
+    <div id="sheetInner">
+    <h5>Pricing Details</h5>
+    <ul id="bookingReqList">
+        <li>Price per hour:</li><p> $20.00</p><p> x 4</p>
+        <li>Add engineer:</li><p> $7.00</p><p> x 4</p>
+        <li>Service Fee (10%):</li><p> $10.80</p>
+        <hr>
+        <li>TOTAL:</li><p> $118.80</p>
+    </ul>
+    </div>
+</div>
+    
+<form class="bookingForm" method="get" action="artist-confirm.html">
+    <button id="confirmBooking" class="tfbutton">Confirm Booking Request (PayPal)</button>
+    </form>
+    
+<script>
+function useLocation(){
+        confirm("Allow us to use your current location?");
+    }
+</script>
+    
+</body>
+
+</html>

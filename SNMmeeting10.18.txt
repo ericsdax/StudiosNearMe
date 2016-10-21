@@ -1,0 +1,10 @@
+StudiosNearMe
+
+-No map
+-3 studio icons per line
+-Sidebar with tags (Amazon)
+-Tag system-- add tags like soundcloud. Autocomplete based on database to add tag and then search brings up results
+-Airbnb icons for # of Engineers and Home/Commercial
+-Studio.html shows just About, plus Read More that leads to other information
+-Calendar view: month, with two dropdowns, one for start and one for end time. Dropdown at bottom shows which engineer services are offered.
+-Calendar has filter at top for engineer times. Default is "All", with all engineer times listed, in different colors.

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudiosNearMe</title>
+    <link rel="stylesheet" type="text/css" href="SNMstyle.css">
+    <link rel="icon" href="images/new_audacitytransmediawikimanual.png">
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <nav>
+        <ul id="navBarList">
+            <li class="fLeft">
+                <a class="active" href="index.html"><img id="logo" src="images/new_audacitytransmediawikimanual.png"> StudiosNearMe</a>
+            </li>
+            <li class="feft">
+                <div id="tfheader">
+                    <form id="tfnewsearch" method="get" action="search.html">
+                        <input type="search" class="tftextinput" name="navSearch" size="50" maxlength="120" autocomplete="on" placeholder="Search by location, studio type, equipment, etc.">
+                        <input type="submit" value="search" class="tfbutton">
+                    </form>
+                    <div class="tfclear"></div>
+                </div>
+            </li>
+            <li class="fLeft"><a id="useLocation" onclick="useLocation()">Use Location</a></li>
+            <li class="fRight"><a href="login.html">Login</a></li>
+            <li class="fRight"><a href="signup.html">Sign Up</a></li>
+            <li class="fRight"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    
+<div id="sheetOuter">
+    <h2>About StudiosNearMe</h2>
+    <div id="sheetInner">
+    <p>StudiosNearMe is a service developed by Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac enim nec mauris vehicula placerat et id dolor. Duis cursus, tortor quis ornare accumsan, est ex tempor tortor, et efficitur enim massa eu lorem. Nam quis lacus pharetra, efficitur urna et, semper elit. Sed vitae turpis ligula. Morbi sit amet metus augue. Nunc eu dui orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse diam mi, hendrerit non nulla at, mollis hendrerit nisi. Nunc vehicula est eget massa suscipit, in vulputate nisi dictum.</p>
+    <p>Proin ante ipsum, efficitur non diam ut, ultricies consequat odio. Maecenas sodales vehicula lacus, in congue erat consequat ac. Nulla malesuada turpis semper arcu maximus, et finibus libero euismod. Etiam vehicula interdum diam, sed gravida nulla lobortis iaculis. Proin sed lobortis est. Suspendisse laoreet arcu et tortor elementum rutrum. Suspendisse facilisis dictum ipsum, non pellentesque est tincidunt id. Etiam ac lacus metus. Nullam malesuada sem lorem. Vestibulum accumsan metus sit amet velit aliquet posuere. Phasellus quam ex, facilisis sed convallis a, pellentesque in nulla. Suspendisse potenti. Pellentesque faucibus metus augue, non scelerisque est rutrum vel.</p>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin sit amet enim quis nibh rutrum tincidunt eget eget odio. Nunc vel dui ut massa ornare viverra sit amet vitae lacus. Curabitur id aliquet elit, non posuere turpis. Aenean scelerisque tincidunt scelerisque. Donec elementum, risus id luctus suscipit, elit mauris ultrices metus, eu porttitor quam ipsum at elit. Praesent pellentesque accumsan purus, ut consectetur tortor lobortis non.</p>
+    <h3>Sign up for free now:</h3>
+    <form class="bookingForm" method="get" action="signup.html">
+    <button id="confirmBooking" class="tfbutton">Sign Up</button>
+    </form>
+    </div>
+</div>
+    
+
+    
+<script>
+function useLocation(){
+        confirm("Allow us to use your current location?");
+    }
+</script>
+    
+</body>
+
+</html>

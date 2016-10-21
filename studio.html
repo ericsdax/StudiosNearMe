@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudiosNearMe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="images/new_audacitytransmediawikimanual.png">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul id="navBarList">
+            <li class="fLeft">
+                <a class="active" href="index.html"><img id="logo" src="images/new_audacitytransmediawikimanual.png"> StudiosNearMe</a>
+            </li>
+            <li class="fLeft">
+                <div id="tfheader">
+                    <form id="tfnewsearch" method="get" action="search.html">
+                        <input type="search" class="tftextinput" name="navSearch" size="50" maxlength="120" autocomplete="on" placeholder="Search by location, studio type, equipment, etc.">
+                        <input type="submit" value="search" class="tfbutton">
+                    </form>
+                    <div class="tfclear"></div>
+                </div>
+            </li>
+            <li class="fLeft"><a id="useLocation" onclick="useLocation()">Use Location</a></li>
+            <li class="fRight"><a href="login.html">Login</a></li>
+            <li class="fRight"><a href="signup.html">Sign Up</a></li>
+            <li class="fRight"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+<div class="container">
+<div id="studioImg">
+    <h2 id="studioName">STUDIO X</h2>
+    <h2 id="studioLocation">NEW ORLEANS, LOUISIANA</h2>
+    <h2 id="studioPrice">$20/hr</h2>
+    <div class="rating">
+<span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
+</div>
+    <img id="studioPic" class="profileImg" src="images/HomeStudio.jpg" alt="StudioX">
+</div>
+    <img id="profilePic" class="profileImg" src="images/profilepic.png" alt="Profile Picture">
+    <div id="info"><p><strong>About this studio:</strong> Studio X was founded in 2011 by audio engineer John Doe. The studio is well-known for its four <a class="htag" target="_blank" href="search.html">#isobooths</a> and its famous reverberant <a class="htag" target="_blank" href="search.html">#stone room</a>. Today, it is used to record musicians from all over <a class="htag" target="_blank" href="search.html">#New Orleans</a>, including some of the biggest names in <a class="htag" target="_blank" href="search.html">#jazz</a>, <a class="htag" target="_blank" href="search.html">#hiphop</a>, and <a class="htag" target="_blank" href="search.html">#blues</a>. Come to Studio X, and you are guaranteed a great recording for a fair price!</p>
+    <p><strong>Recording Equipment:</strong></p>
+        <ul>
+            <li><a class="htag" target="_blank" href="search.html">#Neumann U-67 Nickel</a> microphone</li>
+            <li><a class="htag" target="_blank" href="search.html">#Royer R-122 MKII</a> microphone (2x)</li>
+            <li><a class="htag" target="_blank" href="search.html">#Audix OM3</a> microphone (5x)</li>
+            <li><a class="htag" target="_blank" href="search.html">#Behringer x32</a> mixing console</li>
+            <li><a class="htag" target="_blank" href="search.html">#Yamaha HS5</a> mixing speakers (2x)</li>
+            <li><a class="htag" target="_blank" href="search.html">#PreSonus HD7</a> headphones (x3)</li>
+            <li><a class="htag" target="_blank" href="search.html">#ProD2</a> DI box (x2)</li>
+        </ul>
+    <p><strong>Backline Gear:</strong></p>
+        <ul>
+            <li><a class="htag" target="_blank" href="search.html">#DW Collector's Series</a> 4-piece drum kit</li>
+            <li><a class="htag" target="_blank" href="search.html">#Fender Twin Reverb</a> amp</li>
+            <li><a class="htag" target="_blank" href="search.html">#Big Muff</a> fuzz pedal (2x)</li>
+            <li><a class="htag" target="_blank" href="search.html">#Roland Juno-Di</a> keyboard/synthesizer</li>
+            <li><a class="htag" target="_blank" href="search.html">#Harmonica</a> (x2)</li>
+            <li><a class="htag" target="_blank" href="search.html">#Soprano Ukulele</a></li>
+        </ul>
+    <p><strong>DAWs Available:</strong></p>
+        <ul>
+            <li><a class="htag" target="_blank" href="search.html">#Protools 12</a></li>
+            <li><a class="htag" target="_blank" href="search.html">#Logic Pro X</a></li>
+        </ul>
+    <p><strong>Miscellaneous:</strong></p>
+        <ul>
+            <li><a class="htag" target="_blank" href="search.html">#Minifridge</a></li>
+            <li><a class="htag" target="_blank"
+            <li><a class="htag" target="_blank" href="search.html">#Pool table</a></li>
+        </ul>
+    <br><br><br>
+    </div>
+    
+    <form class="bookingForm">
+    <button id="contactStudio" class="tfbutton">Contact</button>
+    </form>
+    
+    <form class="bookingForm" method="get" action="booking.html">
+    <button id="bookStudio" class="tfbutton">Send Booking Request</button>
+    </form>
+        
+</div>
+    
+    
+
+<script>
+function useLocation(){
+        confirm("Allow us to use your current location?");
+    }
+</script>
+    
+</body>
+
+</html>

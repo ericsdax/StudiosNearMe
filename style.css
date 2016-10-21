@@ -1,0 +1,318 @@
+body {
+  margin: 0;
+  background-color: #c8ebff; }
+
+nav {
+  display: block;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  max-height: 5%;
+  overflow-y: hidden; }
+  nav #navBarList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #19aff0; }
+    nav #navBarList .fLeft {
+      float: left; }
+      nav #navBarList .fLeft #useLocation {
+        cursor: pointer; }
+      nav #navBarList .fLeft #tfheader {
+        background-color: #19aff0; }
+        nav #navBarList .fLeft #tfheader #tfnewsearch {
+          float: right;
+          padding: 10px;
+          /* Fixes submit button height problem in Firefox */ }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tftextinput {
+            margin: 0;
+            padding: 5px 15px;
+            font-family: sans-serif;
+            font-size: 14px;
+            border: 1px solid black;
+            border-right: 0px;
+            border-top-left-radius: 5px 5px;
+            border-bottom-left-radius: 5px 5px; }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tfbutton {
+            margin: 0;
+            padding: 5px 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border: solid 1px black;
+            border-right: 0px;
+            background: #c8ebff;
+            background: -webkit-gradient(linear, left top, left bottom, from(grey), to(black));
+            background: -moz-linear-gradient(top, lightgray, grey);
+            border-top-right-radius: 5px 5px;
+            border-bottom-right-radius: 5px 5px; }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tfbutton:hover {
+            text-decoration: none;
+            background: white;
+            background: -webkit-gradient(linear, left top, left bottom, from(lightgray), to(grey));
+            background: -moz-linear-gradient(top, lightgray, grey); }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tfbutton::-moz-focus-inner {
+            border: 0; }
+        nav #navBarList .fLeft #tfheader .tfclear {
+          clear: both; }
+    nav #navBarList .fRight {
+      float: right; }
+  nav li {
+    float: left; }
+    nav li a:hover {
+      background-color: #28beff; }
+    nav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none; }
+
+#logo {
+  height: 15px; }
+
+.welcomeText {
+  position: relative;
+  left: 15px;
+  display: inline;
+  margin-right: 25px; }
+
+div.responsive {
+  height: 300px; }
+
+div.img {
+  border: 1px solid #ccc;
+  background-position: center center;
+  background-size: cover;
+  height: 300px; }
+  div.img img {
+    width: 100%;
+    height: auto; }
+
+div.img:hover {
+  border: 1px solid #777;
+  cursor: pointer; }
+
+#location1 {
+  background-image: url(images/locationNOLA.jpg); }
+
+#location2 {
+  background-image: url(images/locationPhilly.jpg); }
+
+#location3 {
+  background-image: url(images/locationLA.jpg); }
+
+#location4 {
+  background-image: url(images/locationNashville.jpg); }
+
+#location5 {
+  background-image: url(images/locationNYC.jpg); }
+
+#location6 {
+  background-image: url(images/locationWashDC.jpg); }
+
+#map {
+  height: 400px;
+  width: 100%;
+  position: fixed;
+  border: solid black 2px; }
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  display: inline-block; }
+
+div.price {
+  display: inline-block;
+  float: right;
+  font-size: xx-large;
+  padding: 5px; }
+
+* {
+  box-sizing: border-box; }
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+  margin-bottom: 10px; }
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0; } }
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%; } }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+#searchFilter {
+  float: left;
+  position: absolute;
+  bottom: 85%;
+  left: 15px; }
+
+.locationContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5%; }
+
+div.location {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  float: left;
+  min-width: 20%;
+  margin: 15px; }
+
+.locationDesc {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  color: white;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center; }
+
+.container {
+  padding: 15px;
+  margin: 15px;
+  border: solid black 2px;
+  background-color: lightgray;
+  max-height: 100%;
+  max-width: 100%; }
+
+#studioImg {
+  -webkit-box-shadow: 10px 10px 59px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 59px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 59px 0px rgba(0, 0, 0, 0.75);
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden; }
+
+#studioName {
+  position: absolute;
+  font-size: 50px;
+  float: left;
+  color: white;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+#studioLocation {
+  position: absolute;
+  float: left;
+  font-size: 20px;
+  top: 170px;
+  color: white;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+#studioPrice {
+  position: absolute;
+  font-size: 40px;
+  top: 185px;
+  color: white;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 75px;
+  display: inline;
+  position: absolute;
+  color: white;
+  top: 705px;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.rating > span {
+  display: inline-block;
+  position: relative; }
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute; }
+
+#studioPic {
+  display: inline;
+  height: 750px;
+  width: 100%;
+  overflow-y: hidden; }
+
+#profilePic {
+  height: 250px;
+  float: right;
+  margin-top: 15px;
+  border: groove #28beff 10px; }
+
+#info {
+  margin-right: 50%; }
+
+#GoogleCalendar {
+  width: 100%;
+  padding: 15px; }
+
+#submitRequest {
+  width: 230px;
+  height: 80px;
+  margin-left: 45%;
+  margin-right: 45%; }
+
+.bookingDropdown {
+  float: right;
+  padding: 5px;
+  margin: 5px; }
+
+.bookingForm {
+  margin-bottom: 10px; }
+
+.htag {
+  text-decoration: none;
+  color: black;
+  background-color: #c8c8e6;
+  border-radius: 5px; }
+
+#tagBox {
+  position: relative;
+  bottom: 40px;
+  left: 75px; }
+
+.tagBoxTag {
+  color: black;
+  background-color: #c8c8e6;
+  border-radius: 5px;
+  position: relative; }
+
+.tagBoxTag:hover {
+  background-color: lightgray;
+  cursor: pointer; }
+
+#sheetOuter {
+  margin: 15px;
+  padding: 5px;
+  border: solid black 2px;
+  background-color: #28beff; }
+
+#sheetInner {
+  margin: 15px;
+  padding: 15px;
+  border: solid black 2px;
+  background-color: #c8ebff; }
+
+#bookingReqList {
+  list-style: none; }
+
+#bookingReqList li {
+  font-size: 20px; }
+
+/*# sourceMappingURL=style.css.map */
