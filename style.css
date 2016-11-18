@@ -1,43 +1,78 @@
+@font-face {
+  font-family: 'brandFont';
+  src: url("Segoe_UI_Negreta.ttf"); }
 body {
   margin: 0;
-  background-color: #c8ebff; }
+  background-color: #c8ebff;
+  overflow-x: hidden; }
 
 nav {
   display: block;
   position: fixed;
   z-index: 2;
-  width: 100%;
-  max-height: 5%;
-  overflow-y: hidden; }
+  width: 100vw;
+  max-height: 5vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1vw; }
+  nav textarea:focus, nav input:focus {
+    outline: none; }
   nav #navBarList {
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 5vh;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
     overflow: hidden;
-    background-color: #19aff0; }
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: .9;
+    transition: .5s all; }
     nav #navBarList .fLeft {
       float: left; }
       nav #navBarList .fLeft #useLocation {
         cursor: pointer; }
       nav #navBarList .fLeft #tfheader {
-        background-color: #19aff0; }
+        background-color: transparent; }
+        nav #navBarList .fLeft #tfheader #iconSearch {
+          height: 3vh;
+          margin-top: 1vh;
+          transition: .5s all;
+          display: none; }
         nav #navBarList .fLeft #tfheader #tfnewsearch {
           float: right;
-          padding: 10px;
+          padding: 0;
           /* Fixes submit button height problem in Firefox */ }
           nav #navBarList .fLeft #tfheader #tfnewsearch .tftextinput {
-            margin: 0;
             padding: 5px 15px;
-            font-family: sans-serif;
             font-size: 14px;
-            border: 1px solid black;
-            border-right: 0px;
-            border-top-left-radius: 5px 5px;
-            border-bottom-left-radius: 5px 5px; }
+            border: solid 0px white;
+            background-color: transparent;
+            height: 5vh;
+            font-family: brandFont;
+            width: 60vw;
+            color: white;
+            transition: .5s all; }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tftextinput::-ms-clear {
+            display: none; }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tftextinput::-webkit-input-placeholder {
+            color: white;
+            font-family: "Montserrat", sans-serif; }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tftextinput:-moz-placeholder {
+            /* Firefox 18- */
+            color: white;
+            font-family: "Montserrat", sans-serif; }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tftextinput::-moz-placeholder {
+            /* Firefox 19+ */
+            color: white;
+            font-family: "Montserrat", sans-serif; }
+          nav #navBarList .fLeft #tfheader #tfnewsearch .tftextinput:-ms-input-placeholder {
+            color: white;
+            font-family: "Montserrat", sans-serif; }
           nav #navBarList .fLeft #tfheader #tfnewsearch .tfbutton {
             margin: 0;
             padding: 5px 15px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'brandFont';
             font-size: 14px;
             outline: none;
             cursor: pointer;
@@ -61,20 +96,117 @@ nav {
         nav #navBarList .fLeft #tfheader .tfclear {
           clear: both; }
     nav #navBarList .fRight {
-      float: right; }
+      float: right;
+      margin-right: 2vw; }
   nav li {
     float: left; }
     nav li a:hover {
-      background-color: #28beff; }
+      background-color: transparent;
+      color: lightgray;
+      transition: .2s all; }
     nav li a {
       display: block;
       color: white;
       text-align: center;
-      padding: 14px 16px;
-      text-decoration: none; }
+      padding-top: 1vh;
+      padding-right: 2vw;
+      padding-left: 2vw;
+      text-decoration: none;
+      transition: .2s all; }
+
+#brandTitle {
+  color: #28beff; }
+
+#enter {
+  width: 14vw;
+  height: 5vh;
+  border: solid white 1px;
+  font-size: 2vw;
+  position: relative;
+  margin-left: 43vw;
+  bottom: 4vh;
+  background-color: white;
+  transition: .5s all;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1vw; }
+
+#enter:hover {
+  color: white;
+  background-color: black;
+  transition: .5s all;
+  cursor: pointer; }
+
+#coverPage1 {
+  font-family: 'brandFont';
+  background-image: url(images/CoverHomeStudio.jpg);
+  background-size: cover;
+  background-position: center top;
+  width: 100vw;
+  height: 100vh; }
+  #coverPage1 #transparent {
+    width: 100vw;
+    height: 100vh; }
+    #coverPage1 #transparent #coverMainText {
+      font-size: 7vw;
+      text-align: center;
+      position: relative;
+      top: -5vh;
+      opacity: 0;
+      transition: 1s all; }
+    #coverPage1 #transparent #coverSubText {
+      font-size: 2vw;
+      text-align: center;
+      position: relative;
+      top: -9vh;
+      opacity: 0;
+      transition: 1s all; }
+
+#coverPage2 {
+  font-family: 'brandFont';
+  height: 105vh;
+  margin-top: -3vh;
+  background-image: url(images/CoverHomeStudio2.JPG);
+  background-size: cover;
+  background-position: center bottom; }
+  #coverPage2 h1 {
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 100vw;
+    transition: .3s all; }
+  #coverPage2 p {
+    font-family: "Montserrat", sans-serif; }
+  #coverPage2 #coverInfoContainer {
+    width: 95vw;
+    margin: 2vw;
+    margin-top: 12vh;
+    display: table;
+    table-layout: fixed; }
+  #coverPage2 .coverInfo {
+    width: 20vw;
+    height: 15vh;
+    display: inline-block;
+    border-radius: 25px;
+    padding: 1vh;
+    text-align: center;
+    display: table-cell;
+    color: white; }
+    #coverPage2 .coverInfo img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+
+.active {
+  margin: 0;
+  padding: 0px; }
+
+#logo:hover {
+  transform: rotateY(180deg);
+  transition: 1s all; }
 
 #logo {
-  height: 15px; }
+  height: 5vh;
+  transition: 1s all; }
 
 .welcomeText {
   position: relative;

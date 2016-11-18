@@ -10,137 +10,22 @@
 </head>
 
 <body>
-
     <nav>
         <ul id="navBarList">
             <li class="fLeft">
-                <a class="active" href="index.html"><img id="logo" src="images/new_audacitytransmediawikimanual.png"> StudiosNearMe</a>
+                <a class="active" href="cover.html"><img id="logo" src="images/logo.png"></a>
             </li>
-            <li class="fLeft">
-                <div id="tfheader">
-                    <form id="tfnewsearch" method="get" action="search.html">
-                        <input type="search" class="tftextinput" name="navSearch" size="50" maxlength="120" autocomplete="on" placeholder="Search by location, studio type, equipment, etc.">
-                        <input type="submit" value="search" class="tfbutton">
-                    </form>
-                    <div class="tfclear"></div>
-                </div>
-            </li>
-            <li class="fLeft"><a id="useLocation" onclick="useLocation()">Use Location</a></li>
-            <li class="fRight"><a href="login.html">Login</a></li>
-            <li class="fRight"><a href="signup.html">Sign Up</a></li>
-            <li class="fRight"><a href="about.html">About</a></li>
         </ul>
     </nav>
-
-    <br>
-    <br>
-    <br>
     
-    <h1 class="welcomeText">STUDIOS NEAR <span style="color: red">YOU.</span></h1>
-    <h2 class="welcomeText">Find affordable studios all over the world to meet your every recording need.</h2>
-
-    <div class="locationContainer">
-    
-    <div class="location">
-  <div class="img" id="location1">
-    <a href="search.html">
-      <!--<img src="images/locationNOLA.jpg" alt="New Orleans">-->
-    </a>
-    <h2 class="locationDesc">NEW ORLEANS</h2>
-  </div>
-</div>
-
- <div class="location">
-  <div class="img" id="location2">
-    <a href="search.html">
-      <!--<img src="images/locationPhilly.jpg" alt="Philadelphia">-->
-    </a>
-    <h2 class="locationDesc">PHILADELPHIA</h2>
-  </div>
-</div>
-    
-<div class="location">
-  <div class="img" id="location3">
-    <a href="search.html">
-      <!--<img src="images/locationLA.jpg" alt="Los Angeles">-->
-    </a>
-    <h2 class="locationDesc">LOS ANGELES</h2>
-  </div>
-</div>
-        
-<div class="location">
-  <div class="img" id="location4">
-    <a href="search.html">
-      <!--<img src="images/locationNashville.jpg" alt="Nashville">-->
-    </a>
-    <h2 class="locationDesc">NASHVILLE</h2>
-  </div>
-</div>
-        
-<div class="location">
-  <div class="img" id="location5">
-    <a href="search.html">
-      <!--<img src="images/locationNYC.jpg" alt="New York City">-->
-    </a>
-    <h2 class="locationDesc">NEW YORK CITY</h2>
-  </div>
-</div>
-    
-<div class="location">
-  <div class="img" id="location6">
-    <a href="search.html">
-      <!--<img src="images/locationWashDC.jpg" alt="Washington D.C.">-->
-    </a>
-    <h2 class="locationDesc">WASHINGTON D.C.</h2>
-  </div>
-</div>
-        
-</div>
-    
-
-<form id="colorPicker" action="javascript:changeColor()">
-    <h2>Choose page color:</h2>
-    <input type="color" name="userColor">
-    <input type="submit">
-</form>    
-    
+    <br><br><br><br><br><br>
+   <h1>Mockup for StudioShare website. Click top left icon for cover page.</h1>
     
 <footer>
     <hr>
     <p>&copy; 2016 StudiosNearMe</p>
     <hr>
 </footer>
-    
-    
-<script>
-    function useLocation(){
-        confirm("Allow us to use your current location?");
-    }
-    
-    function changeColor(){
-        var userColor = $("input[name='userColor']").val();
-          $("body").css("background-color", userColor);
-        
-        var userColor = userColor.substring(1);      // strip #
-        var rgb = parseInt(userColor, 16);   // convert rrggbb to decimal
-        var r = (rgb >> 16) & 0xff;  // extract red
-        var g = (rgb >>  8) & 0xff;  // extract green
-        var b = (rgb >>  0) & 0xff;  // extract blue
-
-        var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
-
-        if (luma < 50) {
-        $("body").css("color", "rgb(255,255,255)");
-        }else{
-        $("body").css("color", "rgb(0,0,0)");
-        }
-}
-        
-        
-        
-        
-    
-</script>
     
     
 </body>

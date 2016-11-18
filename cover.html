@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudiosNearMe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul id="navBarList">
+            <li class="fLeft">
+                <a class="active" href="cover.html"><img id="logo" src="images/logo.png"></a>
+            </li>
+            <li class="fLeft">
+                <div id="tfheader">
+                    <img id="iconSearch" src="images/iconSearch.png">
+                    <form id="tfnewsearch" method="get" action="search.html">
+                        <div id="iconSearch"></div>
+                        <input type="search" class="tftextinput" name="navSearch" size="50" maxlength="120" autocomplete="off" placeholder="Search by location, studio type, equipment, etc.">
+                    </form>
+                    <div class="tfclear"></div>
+                </div>
+            </li>
+            <li class="fRight"><a href="signup.html">LOGIN</a></li>
+            <li class="fRight"><a href="signup.html">SIGN UP</a></li>
+            <li class="fRight"><a href="about.html">LIST YOUR STUDIO</a></li>
+        </ul>
+    </nav>
+    
+    <div id="coverPage1">
+    <div id="transparent">
+    <br><br><br>
+    <h1 id="coverMainText">Studio<span id="brandTitle">Share</span></h1>
+    <h4 id="coverSubText">Your personal studio booking assistant.</h4>
+    <form action="search.html">
+    <button id="enter">FIND STUDIOS NOW</button>
+    </form>
+    </div>
+    </div>
+    
+    <div id="coverPage2">
+    <h1>As easy as <span id="brandTitle">1-2-3...</span></h1>
+    
+    <div id="coverInfoContainer">
+        
+    <div class="coverInfo">
+        <img src="images/coverGlobe.png">
+        <h2>Browse</h2>
+        <p>Browse a variety of home and commercial studios to find the perfect creative space for your needs - and budget.</p>
+    </div>
+        
+    <div class="coverInfo">
+        <img src="images/coverCal.png">
+        <h2>Book</h2>
+        <p>Book studios directly on our website using the  scheduling calendar to view studio availability and select your desired dates.</p>
+    </div>
+        
+    <div class="coverInfo">
+        <img src="images/coverPay.png">
+        <h2>Pay</h2>
+        <p>No cash? No problem. Securely pay for your studio time with PayPal in a couple of easy clicks.  </p>
+    </div>
+        
+    </div>
+    <br><br><br>
+    <form action="about.html">
+    <button id="enter">LEARN MORE</button>
+    </form>
+        
+    </div>
+    
+    
+    <script>
+        
+        window.onload = function() {
+            $("#coverMainText").css("opacity", "1");
+            $("#coverMainText").css("top", "0");
+            $("#coverSubText").css("opacity", "1");
+            $("#coverSubText").css("top", "-4.5vh");
+        };
+        
+        
+        $(document).ready(function() {
+            
+        window.onscroll = function() {
+        if ((window.scrollY) <= 0) {
+        $("#navBarList").css("background-color", "transparent");
+        $("nav li a").css("color", "white");
+        $(".tftextinput").css("color", "white");
+        $(".tftextinput").css("border", "solid white 0px");
+        $("#iconSearch").css("display", "none");
+    } else {
+        $("#navBarList").css("background-color", "white");
+        $("nav li a").css("color", "black");
+        $(".tftextinput").css("color", "black");
+        $(".tftextinput").css("border", "solid black 0px");
+        $("#iconSearch").css("display", "inline");
+    }
+};
+    
+        function useLocation(){
+        confirm("Allow us to use your current location?");
+    }
+        
+        });
+    </script>
+    
+</body>
+
+</html>

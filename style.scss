@@ -1,28 +1,46 @@
 $brandColor1: rgb(25, 175, 240);
 $brandColor2: rgb(40, 190, 255);
 $brandColor3: rgb(200, 235, 255);
+$brandColor4: rgb(180, 215, 235);
 
+@font-face {
+    font-family: 'brandFont';
+    src: url("Segoe_UI_Negreta.ttf");
+}
+
+$brandFont2: 'Montserrat', sans-serif;
 
 body {
     margin: 0;
     background-color: $brandColor3;
+    overflow-x: hidden;
 }
-
 
 nav {
     display: block;
     position: fixed;
     z-index: 2;
-    width: 100%;
-    max-height: 5%;
-    overflow-y: hidden;
+    width: 100vw;
+    max-height: 5vh;
+    overflow: hidden;
+    font-family: $brandFont2;
+    font-size: 1vw;
+    
+    textarea:focus, input:focus{
+    outline: none;
+    }
 
     #navBarList {
         list-style-type: none;
-        margin: 0;
         padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 5vh;
+        border-bottom: solid 1px rgba(255,255,255,0.3);
         overflow: hidden;
-        background-color: $brandColor1;
+        background-color: rgba(255,255,255,0.1);
+        opacity: .9;
+        transition: .5s all;
         
             .fLeft {
             float: left;
@@ -32,27 +50,59 @@ nav {
                 }
                 
                 #tfheader {
-                background-color: $brandColor1;
+                background-color: transparent;
+                    
+                    #iconSearch{
+                        height: 3vh;
+                        margin-top: 1vh;
+                        transition: .5s all;
+                        display: none;
+                    }
     
                     #tfnewsearch {
                     float: right;
-                    padding: 10px;
+                    padding: 0;
         
                         .tftextinput {
-                        margin: 0;
                         padding: 5px 15px;
-                        font-family: sans-serif;
                         font-size: 14px;
-                        border: 1px solid black;
-                        border-right: 0px;
-                        border-top-left-radius: 5px 5px;
-                        border-bottom-left-radius: 5px 5px;
+                        border: solid 0px white;
+                        background-color: transparent;
+                        height: 5vh;
+                        font-family: brandFont;
+                        width: 60vw;
+                        color: white;
+                        transition: .5s all;
+                        }
+                        
+                        .tftextinput::-ms-clear {
+                        display: none;
+                        }
+                        
+                        .tftextinput::-webkit-input-placeholder {
+                            color: white;
+                            font-family: $brandFont2;
+                        }
+
+                        .tftextinput:-moz-placeholder { /* Firefox 18- */
+                            color: white;
+                            font-family: $brandFont2;
+                        }
+
+                        .tftextinput::-moz-placeholder {  /* Firefox 19+ */
+                            color: white;
+                            font-family: $brandFont2;
+                        }
+
+                        .tftextinput:-ms-input-placeholder {  
+                            color: white;
+                            font-family: $brandFont2;
                         }
         
                         .tfbutton {
                         margin: 0;
                         padding: 5px 15px;
-                        font-family: Arial, Helvetica, sans-serif;
+                        font-family: 'brandFont';
                         font-size: 14px;
                         outline: none;
                         cursor: pointer;
@@ -91,6 +141,7 @@ nav {
     
             .fRight {
             float: right;
+            margin-right: 2vw;
             }
     }
 
@@ -98,14 +149,20 @@ nav {
         float: left;
         
         a:hover {
-            background-color: $brandColor2;
+            background-color: transparent;
+            color: lightgray;
+            transition: .2s all;
+            //padding-top: 1.5vh;
         }
         a {
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding-top: 1vh;
+            padding-right: 2vw;
+            padding-left: 2vw;
             text-decoration: none;
+            transition: .2s all;
         }
     }    
     
@@ -113,13 +170,113 @@ nav {
 
 
 
-
- 
-
-
-
+#brandTitle{
+    color: $brandColor2;
+}
 
 
+        
+#enter{
+    width: 14vw;
+    height: 5vh;
+    border: solid white 1px;
+    font-size: 2vw;
+    position: relative;
+    margin-left: 43vw;
+    bottom: 4vh;
+    background-color: white;
+    transition: .5s all;
+    font-family: $brandFont2;
+    font-size: 1vw;
+}
+        
+#enter:hover{
+    color: white;
+    background-color: black;
+    transition: .5s all;
+    cursor: pointer;
+}
+
+#coverPage1{
+    font-family: 'brandFont';
+    background-image: url(images/CoverHomeStudio.jpg);
+    background-size:cover;
+    background-position: center top;
+    width: 100vw;
+    height: 100vh;
+    
+    #transparent{
+        width: 100vw;
+        height: 100vh;
+        
+        
+        
+        #coverMainText{
+            font-size: 7vw;
+            text-align: center;
+            position: relative;
+            top: -5vh;
+            opacity: 0;
+            transition: 1s all;
+        }
+        
+        #coverSubText{
+            font-size: 2vw;
+            text-align: center;
+            position: relative;
+            top: -9vh;
+            opacity: 0;
+            transition: 1s all;
+        }
+    }
+}
+
+
+#coverPage2{
+    font-family: 'brandFont';
+    height: 105vh;
+    margin-top: -3vh;
+    background-image: url(images/CoverHomeStudio2.JPG);
+    background-size: cover;
+    background-position: center bottom;
+    
+    h1{
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 100vw;
+        transition: .3s all;
+    }
+    
+    p{
+        font-family: $brandFont2;
+    }
+    
+    #coverInfoContainer{
+        width: 95vw;
+        margin: 2vw;
+        margin-top: 12vh;
+        display: table;
+        table-layout: fixed;
+    }
+    
+    .coverInfo{
+        width: 20vw;
+        height: 15vh;
+        display: inline-block;
+        border-radius: 25px;
+        padding: 1vh;
+        text-align: center;
+        display: table-cell;
+        color: white;
+        
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
 
 
 
@@ -129,12 +286,19 @@ nav {
 
 
 
+.active {
+    margin: 0;
+    padding: 0px;
+}
 
-
-
+#logo:hover{
+    transform: rotateY(180deg);
+    transition: 1s all;
+}
 
 #logo {
-    height: 15px;
+    height: 5vh;
+    transition: 1s all;
 }
 
 .welcomeText {
